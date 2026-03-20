@@ -11,7 +11,6 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import java.math.BigDecimal;
 import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -37,8 +36,6 @@ class ProductoServiceImplTest {
                 .precio(999)
                 .build();
     }
-
-    // ── decreaseStock tests ──────────────────────────────────────────────────
 
     @Test
     void cuandoDisminuirStockEsOk_devolverStockActualizado() {
@@ -96,8 +93,6 @@ class ProductoServiceImplTest {
 
         verify(productoRepository, never()).findById(any());
     }
-
-    // ── getProduct tests ─────────────────────────────────────────────────────
 
     @Test
     void cuandoGetProductoOK_devolverProductoResponse() {
